@@ -12,7 +12,7 @@ if (randomNumber == 1) {
     computerMove = 'nożyce';
 }
 
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Komputer wybrał: ' + computerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -48,8 +48,10 @@ if (computerMove == 'kamień' && playerInput == 'kamień') {
     printMessage('Przegrałeś');
 } else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
     printMessage('Remis');
-}  else(playerInput >= 4) 
-  (printMessage('Nieprawidłowa liczba. YOU LOSE !'))
+} else {
+    (playerInput >= 4);
+    (printMessage('Nieprawidłowa liczba. YOU LOSE !'));
+}
 
 
 
