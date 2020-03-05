@@ -24,7 +24,6 @@ function displayResult(computerMove, playerMove, playerScore = 0, computerScore 
 	console.log('moves:', computerMove, playerMove);
 	if (computerMove == 'kamień' && playerMove == 'kamień') {
 		printMessage('Remis');
-		computerMove += 1;
 	} else if (computerMove == 'kamień' && playerMove == 'papier') {
 		playerScore =+ 1;
 	} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
