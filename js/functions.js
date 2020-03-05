@@ -40,9 +40,6 @@ function displayResult(computerMove, playerMove) {
 		printMessage('Przegrałeś');
 	} else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
 		printMessage('Remis');
-	} else {
-		(playerMove >= 4);
-		(printMessage('Nieprawidłowa liczba. YOU LOSE !'));
 	}
 }
 

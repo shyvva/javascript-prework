@@ -9,7 +9,7 @@ function playGame(playerInput) {
     let computerMove = getMoveName(randomNumber);
 
     printMessage('Komputer wybrał: ' + computerMove);
-    
+
     console.log('Gracz wpisał: ' + playerInput);
 
     let playerMove = getMoveName(playerInput);
@@ -17,6 +17,8 @@ function playGame(playerInput) {
     printMessage('Twój ruch to: ' + playerMove);
 
     let printResult = displayResult(computerMove, playerMove);
+
+
 
 
 }
@@ -31,6 +33,8 @@ document.getElementById('papper').addEventListener('click', function () {
 document.getElementById('scissors').addEventListener('click', function () {
     playGame(3);
 });
+
+
 
 
 
