@@ -8,13 +8,13 @@ function playGame(playerInput) {
 
     let computerMove = getMoveName(randomNumber);
 
-    printMessage('Komputer wybrał: ' + computerMove);
+    printMessage('Computer choose: ' + computerMove);
 
     console.log('Gracz wpisał: ' + playerInput);
 
     let playerMove = getMoveName(playerInput);
 
-    printMessage('Twój ruch to: ' + playerMove);
+    printMessage('Your choice: ' + playerMove);
 
     let printResult = displayResult(computerMove, playerMove);
 
