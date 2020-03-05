@@ -21,8 +21,8 @@ function getMoveName(moveId) {
 }
 
 function displayResult(computerMove, playerMove) {
-
-	if (computerMove == 'kamień' && playerInput == 'kamień') {
+	console.log('moves:', computerMove, playerMove);
+	if (computerMove == 'kamień' && playerMove == 'kamień') {
 		printMessage('Remis');
 	} else if (computerMove == 'kamień' && playerMove == 'papier') {
 		printMessage('Wygrałeś !');
@@ -41,7 +41,8 @@ function displayResult(computerMove, playerMove) {
 	} else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
 		printMessage('Remis');
 	} else {
-		(playerInput >= 4);
+		(playerMove >= 4);
 		(printMessage('Nieprawidłowa liczba. YOU LOSE !'));
 	}
 }
+
