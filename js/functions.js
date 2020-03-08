@@ -8,6 +8,8 @@ function clearMessages() {
 	document.getElementById('messages').innerHTML = '';
 }
 
+
+
 function getMoveName(moveId) {
 	if (moveId == 1) {
 		return 'kamień';
@@ -20,28 +22,38 @@ function getMoveName(moveId) {
 	}
 }
 
-function displayResult(computerMove, playerMove, playerScore = 0, computerScore = 0) {
+function compScore(computerScore) {
+	document.getElementById('computer-score').innerHTML = computerScore;
+
+}
+function score(playerScore) {
+	document.getElementById('player-score').innerHTML = playerScore;
+}
+
+function displayResult(computerMove, playerMove) {
 	console.log('moves:', computerMove, playerMove);
 	if (computerMove == 'kamień' && playerMove == 'kamień') {
 		printMessage('Remis');
 	} else if (computerMove == 'kamień' && playerMove == 'papier') {
-		playerScore =+ 1;
+		score(playerScore += 1);
 	} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
-		computerScore =+ 1;
+		compScore(computerScore += 1);
 	} else if (computerMove == 'papier' && playerMove == 'kamień') {
-		computerScore =+ 1;
+		compScore(computerScore += 1);
 	} else if (computerMove == 'papier' && playerMove == 'papier') {
 		printMessage('Remis');
 	} else if (computerMove == 'papier' && playerMove == 'nożyce') {
-		playerScore =+ 1;
+		score(playerScore += 1);
 	} else if (computerMove == 'nożyce' && playerMove == 'kamień') {
-		playerScore =+ 1;
+		score(playerScore += 1);
 	} else if (computerMove == 'nożyce' && playerMove == 'papier') {
-		computerScore =+ 1;
-	} else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
+		compScore(computerScore += 1);
+	} else {
+		(computerMove == 'nożyce' && playerMove == 'nożyce');
 		printMessage('Remis');
+
 	}
-	document.getElementById('computer-score').innerHTML = computerScore;
-	document.getElementById('player-score').innerHTML = playerScore;
+
 }
+
 
