@@ -9,13 +9,13 @@
         // const randomNumber = Math.floor(Math.random() * (2-1) + 1); Cheat mode computer roll always 1 number I don't like use cheats !
         console.log('Wylosowana liczba to: ' + randomNumber);
 
-        let computerMove = getMoveName(randomNumber);
+        const computerMove = getMoveName(randomNumber);
 
         printMessage('Computer choose: ' + computerMove);
 
         console.log('Gracz wpisał: ' + playerInput);
 
-        let playerMove = getMoveName(playerInput);
+        const playerMove = getMoveName(playerInput);
 
         printMessage('Your choice: ' + playerMove);
 
