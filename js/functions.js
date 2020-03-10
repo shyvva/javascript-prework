@@ -22,16 +22,18 @@ function getMoveName(moveId) {
 	}
 }
 
-function compScore(computerScore) {
+function compScore(computerScore, playerScore) {
 	document.getElementById('computer-score').innerHTML = computerScore;
 
 }
 function score(playerScore) {
 	document.getElementById('player-score').innerHTML = playerScore;
 }
-
+let playerScore = 0;
+let computerScore = 0;
 function displayResult(computerMove, playerMove) {
 	console.log('moves:', computerMove, playerMove);
+
 	if (computerMove == 'kamień' && playerMove == 'kamień') {
 		printMessage('Remis');
 	} else if (computerMove == 'kamień' && playerMove == 'papier') {
@@ -53,7 +55,6 @@ function displayResult(computerMove, playerMove) {
 		printMessage('Remis');
 
 	}
-
 }
 
 
